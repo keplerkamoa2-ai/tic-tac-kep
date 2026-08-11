@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+}
+
+.jeu {
+    background-color: gray;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    width: 320px;
+}
+
+h1 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* scores */
+.scores {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.score-joueur {
+    display: flex;
+    flex-direction: column;
+}
+
+.nom-joueur {
+    font-size: 14px;
+    color: #333;
+}
+
+.you-score,
+.cpu-score {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.tour {
+    margin-bottom: 15px;
+    font-size: 15px;
+    color: #444;
+}
+
+/* grille de jeu */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 8px;
+    margin: 0 auto 15px auto;
+    width: 260px;
+    height: 260px;
+}
+
+.grid-item {
+    background-color: #eaeaea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 42px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 6px;
+    user-select: none;
+}
+
+.grid-item:hover {
+    background-color: #dcdcdc;
+}
+
+.grid-item.coche {
+    cursor: not-allowed;
+}
+
+.message {
+    min-height: 24px;
+    margin-bottom: 15px;
+    font-size: 17px;
+    font-weight: bold;
+    color: #2e7d32;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+button:hover {
+    background-color: #555;
+}

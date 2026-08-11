@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morpion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="jeu">
+        <h1>KEPGAME</h1>
+        <div class="scores">
+            <div class="score-joueur">
+                <span class="nom-joueur">kepler</span>
+                <span class="you-score">0</span>
+            </div>
+            <div class="score-joueur">
+                <span class="nom-joueur">Santa</span>
+                <span class="cpu-score">0</span>
+            </div>
+        </div>
+        <p id="tour" class="tour">C'est au tour de Lionel (O)</p>
+
+        <div class="grid">
+            <div class="grid-item" id="case0" onclick="jouerCase(0)"></div>
+            <div class="grid-item" id="case1" onclick="jouerCase(1)"></div>
+            <div class="grid-item" id="case2" onclick="jouerCase(2)"></div>
+            <div class="grid-item" id="case3" onclick="jouerCase(3)"></div>
+            <div class="grid-item" id="case4" onclick="jouerCase(4)"></div>
+            <div class="grid-item" id="case5" onclick="jouerCase(5)"></div>
+            <div class="grid-item" id="case6" onclick="jouerCase(6)"></div>
+            <div class="grid-item" id="case7" onclick="jouerCase(7)"></div>
+            <div class="grid-item" id="case8" onclick="jouerCase(8)"></div>
+        </div>
+
+        <p id="message" class="message"></p>
+
+        <button id="btn-recommencer" onclick="recommencer()">Recommencer</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
