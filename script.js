@@ -5,7 +5,7 @@ let joueur = {
     score: 0
 };
 let cpu = {
-    nom : "Santa",
+    nom : "cpu",
     symbole: "X",
     score: 0
 };
