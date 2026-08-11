@@ -1,6 +1,6 @@
 //joueur
 let joueur = {
-    nom : "kepler",
+    nom : "joueur",
     symbole: "O",
     score: 0
 };
