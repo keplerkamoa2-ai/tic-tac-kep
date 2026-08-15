@@ -10,35 +10,63 @@
 
     <div class="jeu">
         <h1>KEPGAME</h1>
-        <div class="scores">
-            <div class="score-joueur">
-                <span class="nom-joueur">Joueur</span>
-                <span class="you-score">0</span>
-            </div>
-            <div class="score-joueur">
-                <span class="nom-joueur">cpu</span>
-                <span class="cpu-score">0</span>
+
+        <div id="ecran-mode" class="ecran">
+            <p class="sous-titre">Choisis un mode de jeu</p>
+            <div class="choix-boutons">
+                <button class="btn-mode" onclick="choisirMode('multi')">👥 Multijoueur</button>
+                <button class="btn-mode" onclick="choisirMode('bot')">🤖 Contre le Bot</button>
             </div>
         </div>
-        <p id="tour" class="tour">C'est au tour de Lionel (O)</p>
 
-        <div class="grid">
-            <div class="grid-item" id="case0" onclick="jouerCase(0)"></div>
-            <div class="grid-item" id="case1" onclick="jouerCase(1)"></div>
-            <div class="grid-item" id="case2" onclick="jouerCase(2)"></div>
-            <div class="grid-item" id="case3" onclick="jouerCase(3)"></div>
-            <div class="grid-item" id="case4" onclick="jouerCase(4)"></div>
-            <div class="grid-item" id="case5" onclick="jouerCase(5)"></div>
-            <div class="grid-item" id="case6" onclick="jouerCase(6)"></div>
-            <div class="grid-item" id="case7" onclick="jouerCase(7)"></div>
-            <div class="grid-item" id="case8" onclick="jouerCase(8)"></div>
+        
+        <div id="ecran-difficulte" class="ecran cache">
+            <p class="sous-titre">Choisis la difficulté</p>
+            <div class="choix-boutons">
+                <button class="btn-mode" onclick="choisirDifficulte('facile')">Facile</button>
+                <button class="btn-mode" onclick="choisirDifficulte('moyen')">Moyen</button>
+                <button class="btn-mode" onclick="choisirDifficulte('difficile')"> Difficile</button>
+            </div>
+            <button class="btn-retour" onclick="retourMenu()">&larr; Retour</button>
         </div>
 
-        <p id="message" class="message"></p>
+        <div id="ecran-jeu" class="ecran cache">
+            <div class="scores">
+                <div class="score-joueur">
+                    <span class="nom-joueur" id="nom-joueur1">kepler</span>
+                    <span class="you-score">0</span>
+                </div>
+                <div class="score-joueur">
+                    <span class="nom-joueur" id="nom-joueur2">autre</span>
+                    <span class="cpu-score">0</span>
+                </div>
+            </div>
+            <p id="mode-actif" class="mode-actif"></p>
+            <p id="tour" class="tour">C'est au tour de kepler (O)</p>
 
-        <button id="btn-recommencer" onclick="recommencer()">Recommencer</button>
+            <div class="grid">
+                <div class="grid-item" id="case0" onclick="jouerCase(0)"></div>
+                <div class="grid-item" id="case1" onclick="jouerCase(1)"></div>
+                <div class="grid-item" id="case2" onclick="jouerCase(2)"></div>
+                <div class="grid-item" id="case3" onclick="jouerCase(3)"></div>
+                <div class="grid-item" id="case4" onclick="jouerCase(4)"></div>
+                <div class="grid-item" id="case5" onclick="jouerCase(5)"></div>
+                <div class="grid-item" id="case6" onclick="jouerCase(6)"></div>
+                <div class="grid-item" id="case7" onclick="jouerCase(7)"></div>
+                <div class="grid-item" id="case8" onclick="jouerCase(8)"></div>
+            </div>
+
+            <p id="message" class="message"></p>
+
+            <div class="boutons-jeu">
+                <button id="btn-recommencer" onclick="recommencer()">Recommencer</button>
+                <button id="btn-changer-mode" onclick="retourMenu()">Changer de mode</button>
+            </div>
+        </div>
+
     </div>
 
     <script src="script.js"></script>
 </body>
 </html>
+
